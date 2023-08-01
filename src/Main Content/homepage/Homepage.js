@@ -1,8 +1,12 @@
+import SuggestedPodcast from "./suggestedPodcast"
+import SuggestedMusic from "./suggestedMusic"
+import NewFeature from "./newfeature"
+
 function HomePage() {
     return (
-        <section className="w-[60vw] h-full text-white bg-gradient-to-tl from-[#161a1d] from-60% to-slate-900 overflow-y-scroll section">
-            <div className="w-[90%] m-auto">
-                <div className="text-lg text-gray-400 mt-4">
+        <section className="w-[100%] h-full grow text-white bg-[#080f16] border-l-4  border-gray-700 overflow-y-scroll section">
+            <div className="w-[98%] mt-4 p-4 m-auto">
+                <div className="text-lg text-gray-400 ">
                     <button className="bg-black bg-opacity-40 w-12 h-12 rounded-full active:scale-90 mr-2">
                         <i class="fa-sharp fa-solid fa-chevron-left"></i>
                     </button>
@@ -14,10 +18,9 @@ function HomePage() {
                     
                  <FrontPage />
                
-
                     <div className="py-4 text-gray-400">
                         <div>
-                            <span className="">Global</span>
+                            <span>Global</span>
                             <div className="flex justify-between items-center">
                                 <h1 className="text-4xl text-white font-bold">Top 10</h1>
                                 <a href="#!" className="font-bold">See all</a>
@@ -26,11 +29,10 @@ function HomePage() {
                        <SongTable />
                     </div>
                 </div>
+                <SuggestedPodcast />
+                <SuggestedMusic />
+                <NewFeature />
 
-                <div className="">
-                   <suggestedPod />
-                </div>
-             
             </div>
     </section>
     )
@@ -39,13 +41,13 @@ const FrontPage = () => {
     return (
         <div className="py-4 text-gray-400">
             <div>
-                <span className="">Top</span>
+                <span>Top</span>
                 <div className="flex justify-between items-center">
                     <h1 className="text-4xl text-white font-bold">Trending</h1>
                     <a href="#!" className="font-bold">See all</a>
                 </div>
             </div>
-            <div className="py-8 px-10 my-4 bg-gradient-to-tr from-black from-30% via-[#1b4332] to-slate-900 bg-opacity-40 rounded">
+            <div className="py-8 px-10 my-4 bg-gradient-to-tr from-black from-30% via-[#1b9aaa] to-[#297373 ] bg-opacity-40 rounded">
                     <div className="">
                         <span className="text-lg font-bold">Playlist</span>
                         <h1 className="text-5xl font-bold w-60 text-white my-4">Top Song Of The Week</h1>
@@ -60,11 +62,6 @@ const FrontPage = () => {
     )
 }
 
-const suggestedPod = (props) => {
-    return (
-        <h1 className="bg-white">Hello there</h1>
-    )
-}
 
 const SongTable = () => {
     return (
@@ -140,7 +137,7 @@ const SongTable = () => {
 const SongItem = (props) => {
     return (
         <>
-        <tr className="hover:bg-gray-800 hover:scale-105 bg-opacity-100 transision rounded transition ease-out duration-300">
+        <tr className="hover:bg-gray-700 hover:bg-opacity-30 hover:scale-105 bg-opacity-100 rounded transition ease-out duration-300">
         <td className="px-4 py-4 text-gray-600  flex items-center">
             <span className="pr-4 text-lg text-gray-400">{props.id}</span>
             <div className="flex items-center gap-x-2">
@@ -162,9 +159,9 @@ const SongItem = (props) => {
         </td>
         
         <td className="px-4 py-4">
-            <div className="w-18 flex justify-between text-lg">
-                <span><i class="fa-regular fa-heart"></i> 1K</span>
-                <span className=""><i class="fa-solid fa-ellipsis-vertical"></i></span>
+            <div className="w-18 flex justify-between">
+                <span className="text-base"><i className="fa-solid text-red-500 fa-heart"></i> 1K</span>
+                <span className=""><i className="fa-solid fa-ellipsis-vertical"></i></span>
             </div>
         </td>
     </tr>

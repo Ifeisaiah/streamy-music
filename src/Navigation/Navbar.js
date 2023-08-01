@@ -1,49 +1,89 @@
+import Artist from "../Main Content/homepage/artist";
+
 function NavBar() {
     return (
-      <nav className="w-[20vw] h-full bg-gradient-to-tr from-[#161a1d] from-50% to-slate-900 overflow-y-scroll pt-6 section">
-            <h1 className="uppercase text-2xl text-gray-300 font-bold w-[90%] m-auto">Streamy.io</h1>
-            <form className="relative group my-8 w-[90%] m-auto">
-                <svg
-                    width="20"
-                    height="20"
-                    fill="currentColor"
-                    className="absolute text-gray-400 left-0 top-1/2 transform -translate-y-1/2 translate-x-1/2 "
-                    aria-hidden="true"
-                >
-                    <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                    />
-                </svg>
-                <input
-                    type="text"
-                    name="search"
-                    placeholder="Search"
-                    className="relative w-full h-10 bg-transparent border border-gray-600 rounded-full focus:outline-none pl-8"
-                />    
-            </form>
-            <div className="w-[90%] m-auto">
-            <div className="mb-4 bg-gray-700 bg-opacity-20 p-4 rounded">
+      <nav className="w-[290px] h-full bg-[#080f16] shrink-0  overflow-y-scroll pt-6 section">
+        <div className="flex  w-[85%] m-auto">
+            <span className="text-white font-bold text-lg"><i class="fa-solid fa-bars"></i></span>
+            <h1 className="uppercase text-lg ml-2 text-gray-300 font-bold">ExStream.com</h1>
+        </div>
+           
+            <div className="w-[95%] mt-12 m-auto">
+            <div className="mb-4 p-2 rounded">
                 <h2 className="font-bold text-lg pb-2 text-gray-400 uppercase">menu</h2>
                 <NavItem icon={<i className="fa-solid fa-house"></i>} name="Home" />
                 <NavItem icon={<i class="fa-solid fa-magnifying-glass"></i>} name="Discover" />
                 <NavItem icon={<i className="fa-solid fa-radio"></i>} name="Radio" />
                 <NavItem icon={<i className="fa-solid fa-podcast"></i>} name="Podcast" />
             </div>
-            <div className="mb-4 bg-gray-700 bg-opacity-25 p-4 rounded">
+            <div className="mb-4 p-2 rounded">
                 <h2 className="font-bold text-lg text-gray-400 pb-2 uppercase">library</h2>
+                {/*
                 <NavItem icon={<i className="fa-solid fa-folder"></i>} name="Album" />
                 <NavItem icon={<i className="fa-solid fa-music"></i>} name="Songs" />
                 <NavItem icon={<i className="fa-solid fa-user"></i>} name="Artist" />
+                */}
+                <Artist
+                    artistName="BTS"
+                    img="https://images.unsplash.com/photo-1688870550853-f5956b4c010d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDZ8aVVJc25WdGpCMFl8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60"
+                    songName="On"
+                  
+                />
+
+                <Artist
+                    artistName="Skyler Grey"
+                    img="https://images.unsplash.com/photo-1689516584144-b67d904acc8e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEzfGlVSXNuVnRqQjBZfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=900&q=60"
+                    songName="Bed of lies"
+                  
+                />
+                <Artist
+                    artistName="Jungkook"
+                    img="https://images.unsplash.com/photo-1689426131363-412b430fe109?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE3fGlVSXNuVnRqQjBZfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=900&q=60"
+                    songName="Seven"
+                  
+                />
+
+                <Artist
+                    artistName="Ottoboy"
+                    img="https://images.unsplash.com/photo-1687253363362-d2c7add0919e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDcxfGlVSXNuVnRqQjBZfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=900&q=60"
+                    songName="Sugarcrash"
+                   
+                />
               
             </div>
-            <div className="mb-6 bg-gray-700 bg-opacity-20 p-4 rounded">
+            <div className="mb-6 p-2  rounded">
                 <h2 className="font-bold text-lg text-gray-400 pb-2 uppercase">playlist</h2>
-                <NavItem icon={<i className="fa-solid fa-folder"></i>} name="Born Pink" delete={true} />
-            <NavItem icon={<i className="fa-solid fa-folder"></i>} name="The Album" delete={true} />
+             {/*   <NavItem icon={<i className="fa-solid fa-folder"></i>} name="Born Pink" delete={true} />
+                <NavItem icon={<i className="fa-solid fa-folder"></i>} name="The Album" delete={true} />
                 <NavItem icon={<i className="fa-solid fa-folder"></i>} name="Square One" delete={true} />
                 <NavItem icon={<i className="fa-solid fa-folder"></i>} name="Square Up" delete={true} />
+            */}
+              <Artist
+                    artistName="BTS"
+                    img="https://images.unsplash.com/photo-1688870550853-f5956b4c010d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDZ8aVVJc25WdGpCMFl8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60"
+                    songName="On"
+                  
+                />
+
+                <Artist
+                    artistName="Skyler Grey"
+                    img="https://images.unsplash.com/photo-1689516584144-b67d904acc8e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDEzfGlVSXNuVnRqQjBZfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=900&q=60"
+                    songName="Bed of lies"
+                  
+                />
+                <Artist
+                    artistName="Jungkook"
+                    img="https://images.unsplash.com/photo-1689426131363-412b430fe109?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE3fGlVSXNuVnRqQjBZfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=900&q=60"
+                    songName="Seven"
+                  
+                />
+
+                <Artist
+                    artistName="Ottoboy"
+                    img="https://images.unsplash.com/photo-1687253363362-d2c7add0919e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDcxfGlVSXNuVnRqQjBZfHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=900&q=60"
+                    songName="Sugarcrash"
+                   
+                />
             </div>
         </div>
 
@@ -51,19 +91,18 @@ function NavBar() {
       </nav>
     );
   }
-  
   const NavItem = (props) => {
     return (
-      <div className="flex justify-between items-center hover:text-white text-base text-white my-4">
+      <div className="flex justify-between hover:bg-gray-700 hover:bg-opacity-50 rounded items-center hover:text-white text-base text-white py-2 my-[4px]">
          <div className="flex items-center">
             <span className="pr-2 flex items-center justify-center rounded-full text-gray-400 block text-lg mr-2">
                {props.icon}
             </span>
-            <a href="#!" className="">
+            <a href="#!" className="text-lg">
             {props.name}
             </a>
         </div>
-        {props.delete && <div className="">
+        { props.delete && <div className="">
             <i class="fa-solid fa-trash"></i>
             </div>
         }

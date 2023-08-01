@@ -1,3 +1,7 @@
 .section::-webkit-scrollbar {
   width: 0;
 }
+.suggested-stream {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+}

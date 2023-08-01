@@ -1,9 +1,11 @@
 import React from 'react';
+import Artist from '../Main Content/homepage/artist';
 
 function SideBar() {
     return (
-        <section className="w-[24vw] h-full bg-[#161a1d] text-white p-2 overflow-y-scroll">
-            <div className="w-[100%] m-auto mt-4">
+        <section className="w-[350px] h-full bg-[#080f16] shrink-0 text-white overflow-y-scroll">
+
+            <div className="w-full  m-auto mt-4">
                 <div className="flex justify-between items-center p-2 py-4 rounded">
                     <div className="flex items-center">
                         <img
@@ -25,7 +27,7 @@ function SideBar() {
                 </div>
             </div>
 
-            <div className="py-2 text-gray-400">
+            <div className="py-2 pr-4 text-gray-400">
                 <div>
                     <span>Top</span>
                     <div className="flex justify-between items-center">
@@ -133,29 +135,7 @@ function SideBar() {
     );
 }
 
-const Artist = (props) => {
-    return (
-        <div className="flex justify-between items-center p-2 py-2 rounded hover:bg-gray-800 bg-opacity-20">
-            <div className="flex items-center">
-                <img
-                    className="w-16 h-16 object-cover rounded"
-                    src={props.img}
-                    alt="image"
-                />
 
-                <div className="pl-4">
-                    <h1 className="font-bold text-lg text-white">{props.songName}</h1>
-                    <a href="#!" className="text-gray-400">
-                        {props.artistName}
-                    </a>
-                </div>
-            </div>
-            <div className="text-lg">
-                <span>{props.id}</span>
-            </div>
-        </div>
-    );
-};
 
 export default SideBar;
 
