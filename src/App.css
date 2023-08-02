@@ -1,7 +1,16 @@
 .section::-webkit-scrollbar {
   width: 0;
 }
-.suggested-stream {
+.suggested-stream, .grid_ {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
+}
+.img-zoom {
+  overflow: hidden;
+}
+.img-zoom:hover img {
+  transform: scale(1.5) ;
+}
+.img-zoom img {
+  transition: transform .5s ease;
 }

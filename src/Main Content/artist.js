@@ -9,7 +9,7 @@ const Artist = (props) => {
                 />
 
                 <div className="pl-4">
-                    <h1 className="font-bold text-lg text-white">{props.songName}</h1>
+                    <h1 className="font-semibold text-lg text-[#ced4da]">{props.songName}</h1>
                     <a href="#!" className="text-gray-400">
                         {props.artistName}
                     </a>

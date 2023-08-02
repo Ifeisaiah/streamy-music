@@ -1,5 +1,5 @@
 import React from 'react';
-import Artist from '../Main Content/homepage/artist';
+import Artist from '../Main Content/artist';
 
 function SideBar() {
     return (

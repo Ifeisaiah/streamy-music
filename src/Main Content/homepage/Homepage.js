@@ -1,10 +1,13 @@
 import SuggestedPodcast from "./suggestedPodcast"
 import SuggestedMusic from "./suggestedMusic"
 import NewFeature from "./newfeature"
+import SuggestedVideos from "./suggestedVideo"
+import Category from "../category/category"
+
 
 function HomePage() {
     return (
-        <section className="w-[100%] h-full grow text-white bg-[#080f16] border-l-4  border-gray-700 overflow-y-scroll section">
+     
             <div className="w-[98%] mt-4 p-4 m-auto">
                 <div className="text-lg text-gray-400 ">
                     <button className="bg-black bg-opacity-40 w-12 h-12 rounded-full active:scale-90 mr-2">
@@ -32,9 +35,10 @@ function HomePage() {
                 <SuggestedPodcast />
                 <SuggestedMusic />
                 <NewFeature />
+               <Category />
 
             </div>
-    </section>
+
     )
 }
 const FrontPage = () => {
